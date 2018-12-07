@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{
+	padding: 0;
+	margin : 0;
+}
+
+body{
+	background-image: url(./1.png);
+	margin:0 auto;
+	width: 1920px;
+	}
+}
+li{
+	list-style-type: none;
+}
+.clear {
+		clear: both;
+	}
+
+	header {
+		width: 995px;
+		height: 100px;
+		margin-top: 10px;
+	}
+	#logo {
+		float: right;
+
+		}
+	#top {
+		float: right;
+		margin: 30px 20px 0 0;
+		padding: 8px;
+		background-color: ivory;
+		border-radius: 90px;
+	}
+	nav{
+		width: 650px;
+		height: 140px;
+		margin-left: 170px;
+		background-image: url(./backwood.jpg);
+		border-radius: 20px;
+		padding: 10px;
+		vertical-align: middle;
+
+	}
+	nav li{
+		list-style-type: none;
+		float: left;
+		margin: 0 29px 20px;
+		border: solid 2px #cccccc;
+		border-radius: 20px;
+	}
+	section{
+		float: left;
+		margin-top: 10px;
+		background-image: url(./backwood.jpg);
+		padding: 30px 70px 30px 70px;
+		border-radius: 20px;
+	}
+	aside{
+		float:left;
+		margin:10px 10px 20px; 150px;
+		background-image: url(./backwood.jpg);
+		padding: 20px;
+		border-radius: 20px;
+		
+	}
+	aside li{
+		margin-bottom: 30px;
+		list-style-type: none;
+	}
+	footer{
+		width: 1300px;
+		border-top: solid 1px #cccccc;
+		margin: 20px 270px 0 0;
+	}
+	#footer_box {
+	width: 1100px;
+	margin: 0 auto;
+	}
+	#footer_logo {
+	float: left;
+	margin: 10px 0 0 30px;
+	border: solid 0px red;
+	}
+	#address {
+		float: right;
+		margin: 30px 60px 30px 20px;
+		color: white;
+	}
+	#customer{
+		float: right;
+		margin: 30px 0 0 180px;
+	}
+	#page{
+		width: 1000px;
+		margin: auto;
+		}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+      opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4, {
+    background: rgba(0, 0, 0, 0.8);
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('html').css({'cursor':'url(./cur.cur), auto'});
+
+</script>
+
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+
+	<div id="page">
+	<header>
+		<div id="top">
+			로그인 | 회원가입
+		</div>
+		<div id="logo">
+			<img src="./title.png">
+		</div>
+	</header>
+	
+
+ <div class="clear"></div> <!-- float 속성 해제  -->
+ 	<nav>
+ 		<ul>
+ 			<li><a href="shiba2.html"><img src="./hum.png" width="100px"></a></li>
+ 			<li><a href="pome.html"><img src="./pome.png" width="100px"></a></li>
+ 			<li><a href="welsh.html"><img src="./welsh.png" width="100px"></a></li>
+ 			<li><a href="#"><img src="./husky.png" width="100px"></a></li>
+ 		</ul>
+ 	</nav>
+ 	<div class="clear"></div>
+
+ 	 <section>
+ <ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+        <div class="slide">
+            <img src="./main01.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-6" class="prev">&#x2039;</label>
+            <label for="img-2" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="./main02.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-1" class="prev">&#x2039;</label>
+            <label for="img-3" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="./main03.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-2" class="prev">&#x2039;</label>
+            <label for="img-4" class="next">&#x203a;</label>
+        </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="./main04.jpg" />
+        </div>
+        <div class="nav">
+            <label for="img-3" class="prev">&#x2039;</label>
+            <label for="img-5" class="next">&#x203a;</label>
+        </div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+    </li>
+</ul>
+</div>
+ 	 </section>
+
+
+ 	 <aside>
+ 	 	<ul>
+ 	 		<li>
+ 	 			<a href="https://www.youtube.com/channel/UCiHpUyvzpsGFfD5Jd98rCzA"><img style="
+				border: 5px solid red;
+				border-radius: 50px;				
+				"src="https://yt3.ggpht.com/a-/AN66SAw8T8BzE8ALFYpJga2ZcjzpT6Q-BTgOBU37Ig=s176-c-k-c0x00ffffff-no-rj-mo"
+				onmouseover="this.src=
+				'./you02.jpg'
+				" onmouseout="this.src=
+				'https://yt3.ggpht.com/a-/AN66SAw8T8BzE8ALFYpJga2ZcjzpT6Q-BTgOBU37Ig=s176-c-k-c0x00ffffff-no-rj-mo'" border="0">
+			</a>
+ 	 		</li>
+ 	 		<li>
+ 	 			<a href="https://www.youtube.com/channel/UCtN5SOrYGkW7P1lTsCkEjBQ"><img style="
+				border: 5px solid red;
+				border-radius: 50px;
+				"src="https://yt3.ggpht.com/a-/AN66SAxQc7Snp3NlBAzHvko38X7wNw6oGQO87zU4LQ=s176-c-k-c0x00ffffff-no-rj-mo"
+				onmouseover="this.src=
+				'./you01.jpg'
+				" onmouseout="this.src=
+				'https://yt3.ggpht.com/a-/AN66SAxQc7Snp3NlBAzHvko38X7wNw6oGQO87zU4LQ=s176-c-k-c0x00ffffff-no-rj-mo'" border="0">
+				</a>
+ 	 		</li>
+
+ 	 	</ul>
+ 	 </aside>
+ <div class="clear"></div>
+ 	  	<div id="address">
+ 	 	<footer>
+			<div id="footer_box">
+		<div id="footer_logo">
+			<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTui2jPoP4uW2yLhusn0szFBNWWAhYt6uU5kBN2xiEOhKcC-HrL_Q'
+			width="70%">
+		</div>
+		<ul id="address">
+			<li>서울시 OO구 OO동 1234 우:123-1234</li>
+			<li>TEL:012-123-1234 Email : email@address.com</li>
+			<li>COPYRIGHT (C) 옆집 댕댕이 ALL RIGHTS RESERVED</li>
+		</ul>
+
+		</div>
+
+		<div id="customer">
+		</div>
+		</footer>
+	
+</body>
+</html>
